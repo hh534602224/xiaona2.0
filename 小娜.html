@@ -31,6 +31,7 @@ this.qiuhe=function (){
     }
     alert('和为：'+sum);
 }
+// 时间
 this.shijian=function(){
     var time=new Date();
     var nian=time.getFullYear();
@@ -46,6 +47,13 @@ this.shijian=function(){
     miao<10?miao='0'+miao:miao;
     alert('当前时间为：'+nian+'-'+yue+'-'+ri+'-'+shi+':'+fen+':'+miao)
 }
+// 笑话
+this.xiaohua=function(){
+    var xiaohua1=['笑话1','笑话2','笑话3','笑话4','笑话5']
+    var xiaohua2=Math.floor(Math.random()*xiaohua1.length);
+        alert(xiaohua1[xiaohua2]);
+}
+
 
 }
 var xiaona=new XiaoNa();
@@ -64,7 +72,13 @@ switch(msg){
     case '时间':
     xiaona.shijian();
     break;
-
+    case '3':
+    case '笑话':
+    xiaona.xiaohua();
+    break;
+    default:
+    alert('我，胖虎，下次再输错我就锤死你！')
+    break;
     }
 
 
