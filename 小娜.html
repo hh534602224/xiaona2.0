@@ -31,15 +31,26 @@ this.qiuhe=function (){
     }
     alert('和为：'+sum);
 }
-
-
+this.shijian=function(){
+    var time=new Date();
+    var nian=time.getFullYear();
+    var yue=time.getMonth();
+    var ri =time.getDate();
+    var shi=time.getHours();
+    var fen=time.getMinutes();
+    var miao=time.getSeconds();
+    yue<10?yue='0'+yue:yue;
+    ri<10?ri='0'+ri:ri;
+    shi<10?shi='0'+shi:shi;
+    fen<10?fen='0'+fen:fen;
+    miao<10?miao='0'+miao:miao;
+    alert('当前时间为：'+nian+'-'+yue+'-'+ri+'-'+shi+':'+fen+':'+miao)
+}
 
 }
 var xiaona=new XiaoNa();
 while(1){
-
     xiaona.kaishi();
-
 if(msg==='q'){
     alert('家境贫寒！告辞！')
     break;
@@ -49,7 +60,12 @@ switch(msg){
     case '求和':
     xiaona.qiuhe();
     break;
-}
+    case '2':
+    case '时间':
+    xiaona.shijian();
+    break;
+
+    }
 
 
 }
