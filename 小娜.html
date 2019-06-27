@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小娜</title>
+</head>
+<body>
+    
+</body>
+<script>
+var msg;
+
+function XiaoNa(){
+    // 开始询问
+this.kaishi=function (){
+    msg=prompt('请选择你想要的功能，例如：输入数字"1"或"求和"之类的关键字\n' +
+        '1.求和功能\n' +
+        '2.日期功能\n' +
+        '3.笑话功能\n' +
+        '输入q退出')
+}
+// 求和
+this.qiuhe=function (){
+    var shu1=prompt('请输入数字，格式：1,2,3,4....')
+    var shu2=shu1.split(',')
+    var sum=0;
+    for(var i=0;i<shu2.length;i++ ){
+        sum=sum+parseFloat(shu2[i]) ;
+    }
+    alert('和为：'+sum);
+}
+
+
+
+}
+var xiaona=new XiaoNa();
+while(1){
+
+    xiaona.kaishi();
+
+if(msg==='q'){
+    alert('家境贫寒！告辞！')
+    break;
+}
+switch(msg){
+    case '1':
+    case '求和':
+    xiaona.qiuhe();
+    break;
+}
+
+
+}
+
+</script>
+</html>
